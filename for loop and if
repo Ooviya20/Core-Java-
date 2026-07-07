@@ -1,0 +1,17 @@
+package bank;
+import java.util.Scanner;
+public class empty {
+	
+	public static void main(String[] args) {
+
+  for(char s='a';s<='z'; s++) {
+	if(s=='a' || s=='e' || s=='i' || s=='o' ||s=='u') 
+	{
+		 System.out.println("the vowels are:"+s);
+	}
+else {
+		System.out.println("not vowels are:"+s);
+	}
+}
+}
+}

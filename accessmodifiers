@@ -1,0 +1,67 @@
+package bank;
+import java.util.Scanner;
+public class newbank {
+	
+	  private int balance=10000;
+    int accountNo = 123456;
+    private int oldpin = 1234;
+    
+    
+    public void deposit(int amount) {
+    	if(amount > 0) {
+    		
+    		balance +=  amount;            
+            System.out.println("Amount Deposited Successfully:" + balance);
+    		
+    		
+    	}
+    }
+    public void withdraw(int amount) {
+    	 
+    	 if(amount>0 && balance>=amount) {
+    		 balance = balance - amount;
+    		 System.out.println("withdraw successfully:"+ balance);
+    		 
+    	 }
+    	 else {
+    		 System.out.println("don't have sufficient amount from your balance");
+    	 }
+    }
+    public void checkbalance() {
+    	
+    	System.out.println("current balance:"+balance);
+    }
+    
+    public void changepin(int oldpin, int newpin) {
+    	if(oldpin!=newpin) {
+ 
+    		System.out.println("PIN successfully changed");
+    	}
+    		else {
+    			System.out.println("PIN doesn't changed because old pin same as new pin");
+    		}
+    	}
+   
+	public static void main(String[] args) {
+		
+		Scanner scan = new Scanner(System.in);
+
+		newbank b1 = new newbank();
+		System.out.println("Enter The deposit amount:");
+		int a=scan.nextInt();
+		b1.deposit(a);
+		System.out.println("Enter The withdraw amount:");
+		int b =scan.nextInt();
+		b1.withdraw(b);
+		b1.checkbalance();
+		System.out.println("To change pin");
+		System.out.println("enter your oldpin:");
+		int c =scan.nextInt();
+		System.out.println("enter your newpin:");
+		int d =scan.nextInt();
+		b1.changepin(c,d);
+		
+		
+	}
+
+}

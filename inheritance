@@ -1,0 +1,25 @@
+package class1;
+class bike{
+	
+	void drive() {
+		System.out.println("I'm going to drive");
+	}
+}
+class scooty extends bike{
+	
+	void drive(String name) {
+		System.out.println("scooty is repair condition: "+name);
+
+	}
+}
+
+public class practice {
+	public static void main(String[] args) {
+		scooty s = new scooty();
+		s.drive("activa");
+	    s.drive();
+		
+		
+	}
+
+}

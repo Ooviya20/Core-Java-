@@ -1,0 +1,40 @@
+package class1;
+
+public class practice3 {
+	// without return type and parameter
+	
+	void display() {
+		System.out.println("no return type and no parameter");
+	}
+	// with return type with parameter
+	
+	public int add(int a,int b) {
+		int c = a + b;
+		return c;
+	}
+	// with return type without parameter
+	
+	public int sub(){
+		 int a =10;
+	     return a;
+		
+	}
+	//without return type with parameter
+	public void show(String name) {
+		System.out.println(name);
+		
+	}
+	
+	
+	public static void main(String[] args) {
+		practice3 p = new practice3();
+		p.display();
+		System.out.println(p.add(34, 56));
+		System.out.println(p.sub());
+		p.show("methods");
+		
+		
+		
+		
+}
+}

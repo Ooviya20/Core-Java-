@@ -1,0 +1,30 @@
+package task2;
+
+class shapes {
+	void area() {
+		int b = 4;
+		int h = 2;
+		double c =0.5  * b * h;
+		System.out.println("area of triangle :" + c);
+	}
+
+	void area(int l, int b) {
+		System.out.println("area of rectangle:" + l * b);
+
+	}
+
+	void area(int a) {
+		System.out.println("area of square:" + a * a);
+	}
+
+}
+
+public class polymorphism {
+
+	public static void main(String[] args) {
+		shapes s = new shapes();
+		s.area();
+		s.area(10, 4);
+		s.area(2);
+	}
+}

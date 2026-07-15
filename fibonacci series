@@ -1,0 +1,21 @@
+import java.util.Scanner;
+class fibo{
+
+    public static void main(String[] args){
+       int n1 =0;
+       int n2=1;
+       int sum = 0;
+    Scanner sc = new Scanner(System.in);
+    System.out.println("enter how many terms:");
+    int num = sc.nextInt();
+    
+    for(int i= 1;i<=num;i++){
+        sum = n1+n2; 
+        n1=n2;
+        n2=sum;
+        System.out.println("fibo series:"+sum);
+        
+
+    }
+    }
+}

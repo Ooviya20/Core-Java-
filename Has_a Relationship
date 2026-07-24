@@ -1,0 +1,58 @@
+package task2;
+
+class Engine{
+	String enginenumber;
+	int horsepower;
+   
+	public  Engine(String enginenumber, int horsepower) {
+	this.enginenumber = enginenumber;
+	this.horsepower = horsepower;
+	
+		
+	}
+    public void enginenumber() {
+    	System.out.println("ENGINE NUMBER:"+enginenumber);
+    }
+    
+	public void horsepower() {
+		
+		System.out.println("HORSE POWER:"+horsepower);
+		
+	}
+	
+}
+class car{
+	
+	String name;
+	Engine e;
+	public car(String name,Engine e) {
+		this.name = name;
+		this.e = e;
+		
+		
+	}
+	public void carname() {
+		System.out.println("CAR NAME:"+name);
+	}
+	public void Engineengine() {
+		e.enginenumber();
+		e.horsepower();
+	}
+	
+}
+
+public class Has_a {
+
+	public static void main(String[] args) {
+		
+		Engine e = new Engine("EN123",250);
+		
+		car c = new car("BMW",e);
+		c.carname();
+		 c.Engineengine();
+		
+
+	}
+
+}
+

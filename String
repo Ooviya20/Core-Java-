@@ -1,0 +1,23 @@
+package task2;
+
+public class substring_program {
+
+	public static void main(String[] args) {
+		String s ="java";
+		String a = "ja";
+		String ans ="";
+		for(int i =0;i<s.length();i++) {
+			for(int j = i+1;j<=s.length();j++) {
+				String sub = s.substring(i,j);
+				if(sub.contains("j")&&sub.contains("a")) {
+					if((ans.equals(""))||sub.length()<ans.length()) {
+						ans = sub;
+					}
+				}
+			}
+		}
+		System.out.println("the smallest substring from the given string:"+ans);
+
+	}
+
+}

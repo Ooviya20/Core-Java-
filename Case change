@@ -1,0 +1,26 @@
+package practice;
+
+import java.util.Scanner;
+public class UptoLow_LowtoUp {
+
+	public static void main(String[] args) {
+		
+			Scanner sc = new Scanner(System.in);
+			System.out.println("enter the name:");
+			String name = sc.nextLine();
+			System.out.println("changed to lowercase:");
+			for(int i=0;i<name.length();i++) {
+				char ch = name.charAt(i);
+				
+			if(ch>='a'&& ch<='z') {
+				char b =(char)(ch - 32);
+				System.out.print(b);
+			}
+				
+			}
+
+			
+
+		}
+
+	}

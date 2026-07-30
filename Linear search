@@ -1,0 +1,25 @@
+package practice;
+import java.util.Scanner;
+public class linearsearch {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int a[]= {30,40,76,98,38,47};
+		System.out.println("enter the value");
+		int found = sc.nextInt();
+		
+		
+		
+		for(int i=0;i<a.length;i++) {
+		
+			if(a[i]==found) {
+				
+				System.out.println("the index value for your number:"+i);
+				return;
+			}
+			
+		}
+		System.out.println("element not found");
+    
+}
+}

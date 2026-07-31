@@ -1,0 +1,28 @@
+package practice;
+import java.util.Scanner;
+public class Exception_array {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("enter the value");
+		int num = sc.nextInt();
+		int a[] = new int[5];
+		
+		for(int i = 1;i<a.length;i++) {
+			a[i] = sc.nextInt();
+		}
+		System.out.println("index value:");
+		for(int i = 1;i<a.length;i++) {
+			
+		}
+		try {
+			System.out.println(a[6]);
+			}
+			catch(ArrayIndexOutOfBoundsException e) {
+				System.out.println("index value of number not found");
+			}
+		
+
+	}
+
+}

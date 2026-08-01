@@ -33,3 +33,47 @@ public class Throw_Throws {
 	}
 
 }
+
+
+// TO CHECK THE AGE WHETHER ELIGIBLE TO VOTE OR NOT
+
+package practice;
+import java.util.*;
+class error extends Exception {
+	public error(String s) {
+		super(s);
+	}
+	
+}
+public class Ehandling {
+	Scanner sc = new Scanner(System.in);
+	
+	
+	public void cal() throws error {
+		System.out.println("enter the age:");
+		int age = sc.nextInt();
+	if(age>=18) {
+		
+		System.out.println("eligible to vote");
+	}
+	else {
+		throw new error("the person age must be above 18 eligible to vote");
+		
+	}
+	}
+
+	public static void main(String[] args) throws error {
+		Ehandling e = new Ehandling();
+		try {
+		e.cal();
+		}
+		catch(Exception em) {
+			System.out.println(em.getMessage());
+		}
+		
+		
+		
+
+	}
+
+}

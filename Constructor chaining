@@ -1,1 +1,29 @@
+package task2;
 
+public class constructor_chaining {
+	
+	
+public constructor_chaining(int a){
+	
+	System.out.println(a);
+		
+	}
+public constructor_chaining(int a,int b){
+	this(40);
+	System.out.println(a+b);
+	
+}
+public constructor_chaining(){
+	this(20,30);
+	System.out.println("this is empty");
+}
+
+	public static void main(String[] args) {
+		constructor_chaining c = new constructor_chaining();
+		
+		
+
+
+	}
+
+}

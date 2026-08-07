@@ -1,0 +1,36 @@
+package file_Handling_task;
+import java.io.*;
+public class Filewrite {
+
+	public static void main(String[] args) throws IOException {
+		File f = new File("C:\\code\\Basics\\fsd68");
+		f.mkdir();
+		File f1 = new File("C:\\code\\Basics\\fsd68\\sample.txt");
+		f1.createNewFile();
+		
+		FileWriter f2 = new FileWriter(f1);
+		f2.write("this is file  handling  topic");
+		FileReader f3 = new FileReader(f1);
+		int asci = f3.read();
+		while(asci>=0) {
+			System.out.println((char)asci);
+			asci = f3.read();
+		}
+		
+		BufferedWriter bw = new BufferedWriter(f2);
+			bw.write("pending");
+			bw.flush();
+		BufferedReader br = new BufferedReader(f3);	
+		String read = br.readLine();
+		while(read!=null) {
+			System.out.println(read);
+			read = br.readLine();
+			
+		}
+		
+		
+	
+		
+	}
+
+}
